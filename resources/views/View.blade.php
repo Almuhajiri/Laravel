@@ -37,6 +37,9 @@
         color: #636b6f; 
         font-weight: bolder;
       }
+      .btn{
+        border : none !important;
+      }
     </style>
   </head>
   <body>
@@ -44,13 +47,14 @@
       <div>
         <div>
           <table class="table">
-            <thead>
+            <thead class="thead-dark">
               <tr>
                 <th>ID</th>
                 <th>Judul</th>
                 <th>Pengarang</th>
                 <th>Tahun Terbit</th>
                 <th>Penerbit</th>
+                <th>~</th>
               </tr>
             </thead>
             <tbody class="table-hover">
@@ -61,6 +65,10 @@
                   <td>{{$buku->pengarang}}</td>
                   <td>{{$buku->tahun_terbit}}</td>
                   <td>{{$buku->penerbit}}</td>
+                  <td>
+                    <a href="/edit/{{ $buku->id }}" class="btn btn-warning">Edit</a>
+                    <a href="/destroy/{{ $buku->id }}" class="btn btn-danger">Hapus</a>
+                  </td>
                 </tr>
               @endforeach
             </tbody>
