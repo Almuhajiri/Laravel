@@ -47,7 +47,7 @@
       <div>
         <div>
           <table class="table">
-            <thead class="thead-dark">
+            <thead class="thead-light">
               <tr>
                 <th>ID</th>
                 <th>Judul</th>
